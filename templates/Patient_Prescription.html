@@ -1,0 +1,905 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Prescription with NFC Card Identification</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'Patient_Prescription.css' %}">
+
+</head>
+<body>
+    
+    {% include 'header.html' %}
+
+
+ <main>
+
+
+  <!-- Products as Card start -->
+
+  <section class="container my-5">
+    <div>
+        <h2 style="text-align: center;padding-bottom: 30px;"> Health Categories</h2>
+
+
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+        <!-- 1st box start -->
+        <div class="col zoom">
+          <div class="card  bg-dark text-light">
+            <img src="{% static 'Images/blood.jpg' %}" class="card-img-top" height="auto" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Blood</h5>
+              <p class="card-text">Haematological diseases, anaemia, clotting (including thromboses and venous embolisms) and normal development and function of platelets and erythrocytes.</p>
+            </div>
+
+         <!-- Using Modal-->
+
+            <div class="card-footer mx-auto">
+                <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1"> <!--data-toggle and data-target are invalid for bootstrap 5 || change #examplemModal name for every box -->
+                       See Files
+                  </button>
+
+            <!-- Modal -->
+              <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModal1Label" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                       <div class="modal-header">
+                          <h2 class="modal-title" id="exampleModal1Label">Blood</h2>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                            </button>
+                       </div>
+                       <div class="modal-body">
+                        <h3 class="modalbody">No files found!</h3>
+                       </div>
+                       <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-primary">Update</button>
+                    </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Modal-->
+          </div>
+        </div>
+<!-- 1st box end -->
+
+<!-- 2nd box start -->
+
+
+        <div class="col zoom">
+          <div class="card  bg-dark text-light">
+            <img src="{% static 'Images/cancer.jpg' %}" class="card-img-top" height="50%" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" >Cancer and Neoplasms</h5>
+              <p class="card-text">All types of neoplasms, including benign, potentially malignant, or malignant (cancer) cancer growths. This includes leukaemia and mesothelioma.</p>
+            </div>
+            <!-- Using Modal-->
+
+            <div class="card-footer mx-auto">
+              <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+                     See Files
+                </button>
+
+          <!-- Modal -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModal2Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModal2Label">Cancer and Neoplasms</h2>
+                          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                             <span aria-hidden="true">&times;</span>
+                          </button>
+                     </div>
+                     <div class="modal-body">
+                      <h3 class="modalbody">No files found!</h3>
+                     </div>
+                     <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary">Update</button>
+                  </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          <!-- End of Modal-->
+          </div>
+        </div>
+
+
+    <!-- 2nd box end -->
+
+    <!-- 3rd box start -->
+        <div class="col zoom">
+          <div class="card  bg-dark text-light">
+            <img src="{% static 'Images/cardiovascular.jpg' %}" class="card-img-top" height="50%" alt="...">
+            <div class="card-body">
+              <h5 class="card-title" >Cardiovascular</h5>
+              <p class="card-text">Coronary heart disease, diseases of the vasculature and circulation including the lymphatic system, and normal development and function of the cardiovascular system.</p>
+            </div>
+             <!-- Using Modal-->
+
+            <div class="card-footer mx-auto">
+                <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+                       See Files
+                  </button>
+
+            <!-- Modal -->
+              <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModal3Label" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                       <div class="modal-header">
+                          <h2 class="modal-title" id="exampleModal3Label">Cardiovascular</h2>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                            </button>
+                       </div>
+                       <div class="modal-body">
+                        <h3 class="modalbody">1 file found!</h3>
+                        <a href="Images/heartprescription.jpg">heartprescription.jpg</a>
+                       </div>
+                       <div class="modal-footer">
+                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                         <button type="button" class="btn btn-primary">Update</button>
+                    </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+            <!-- End of Modal-->
+          </div>
+        </div>
+      
+
+      <!-- 3rd box end -->
+    </div>
+      
+      
+      <div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+
+      <!-- 4th box start -->
+      <div class="col zoom">
+        <div class="card  bg-dark text-light">
+          <img src="{% static 'Images/congenital.jpg' %}" class="card-img-top" height="50%" alt="..." >
+          <div class="card-body">
+            <h5 class="card-title">Congenital Disorders</h5>
+            <p class="card-text">Physical abnormalities and syndromes that are not associated with a single type of disease or condition including Down's syndrome and cystic fibrosis.</p>
+          </div>
+          <!-- Using Modal-->
+
+          <div class="card-footer mx-auto">
+            <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal4"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+                   See Files
+              </button>
+
+        <!-- Modal -->
+          <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModal4Label" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                   <div class="modal-header">
+                      <h2 class="modal-title" id="exampleModal4Label">Congenital Disorders</h2>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                        </button>
+                   </div>
+                   <div class="modal-body">
+                    <h3 class="modalbody">No files found!</h3>
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                     <button type="button" class="btn btn-primary">Update</button>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Modal-->
+        </div>
+      </div>
+
+<!-- 4th box end -->
+
+<!-- 5th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/ear.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Ear</h5>
+        <p class="card-text">Deafness and normal ear development and function.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal5"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+
+    <!-- Modal -->
+      <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModal5Label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModal5Label">Ear</h2>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+               </div>
+               <div class="modal-body">
+                <h3 class="modalbody">No files found!</h3>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary">Update</button>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 5th box end -->
+
+<!-- 6th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/eye.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Eye</h5>
+        <p class="card-text">Diseases of the eye and normal eye development and function.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal6"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+
+    <!-- Modal -->
+      <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModal6Label" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h2 class="modal-title" id="exampleModal6Label">Eye</h2>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                    </button>
+               </div>
+               <div class="modal-body">
+                <h3 class="modalbody">3 files found!</h3>
+                <a href="Images/eyeprecription1.jpg">eyeprecription1.jpg</a><br>
+                <a href="Images/eyeprescription2.png">eyeprescription2.png</a><br>
+                <a href="Images/eyeprecription3.jpg">eyeprecription3.jpg</a><br>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary">Update</button>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Modal-->
+
+    </div>
+  </div>
+<!-- 6th box end -->
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+<!-- 7th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/infection.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Infection</h5>
+        <p class="card-text">Diseases caused by pathogens, acquired immune deficiency syndrome, sexually transmitted infections and studies of infection and infectious agents.</p>
+      </div>
+
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 7th box end -->
+
+
+<!-- 8th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/inflammatory.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Inflammatory and Immune System</h5>
+        <p class="card-text">Rheumatoid arthritis, connective tissue diseases, autoimmune diseases, allergies and normal development and function of the immune system.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 8th box end -->
+
+<!-- 9th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/injury.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Injuries and Accidents</h5>
+        <p class="card-text">Fractures, poisoning and burns.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 9th box end -->
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+
+<!-- 10th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/mental_health.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Mental Health</h5>
+        <p class="card-text">Depression, schizophrenia, psychosis and personality disorders, addiction, suicide, anxiety, eating disorders, learning disabilities, autistic spectrum disorders and studies of normal psychology, cognitive function and behaviour.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 10th box end -->
+
+<!-- 11th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/metabolic.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Metabolic and Endocrine</h5>
+        <p class="card-text">Metabolic disorders (including Diabetes) and normal metabolism and endocrine development and function. This includes all research on the pineal, thyroid, parathyroid, pituitary and adrenal glands.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 11th box end -->
+
+<!-- 12th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/musculoskeletal.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Musculoskeletal</h5>
+        <p class="card-text">Osteoporosis, osteoarthritis, muscular and skeletal disorders and normal musculoskeletal and cartilage development and function.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 12th box end -->
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+<!-- 13th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/neurological.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Neurological</h5>
+        <p class="card-text">Dementias, transmissible spongiform encephalopathies, Parkinson’s disease, neurodegenerative diseases, Alzheimer’s disease, epilepsy, multiple sclerosis and studies of the normal brain and nervous system.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 13th box end -->
+
+<!-- 14th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/oral.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Oral and Gastrointestinal</h5>
+        <p class="card-text">Inflammatory bowel disease, Crohn’s disease, diseases of the mouth, teeth, oesophagus, digestive system including liver and colon, and normal oral and gastrointestinal development and function.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 14th box end -->
+
+<!-- 15th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/renal.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Renal and Urogenital</h5>
+        <p class="card-text">Kidney disease, pelvic inflammatory disease, renal and genital disorders, and normal development and function of male and female renal and urogenital system.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 15th box end -->
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+<!-- 16th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/reproductive.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Reproductive Health and Childbirth</h5>
+        <p class="card-text">Fertility, contraception, abortion, in vitro fertilisation, pregnancy, mammary gland development, menstruation and menopause, breast feeding, antenatal care, childbirth and complications of newborns.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 16th box end -->
+
+<!-- 17th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/respiratory.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Respiratory</h5>
+        <p class="card-text">Asthma, chronic obstructive pulmonary disease, respiratory diseases and normal development and function of the respiratory system.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 17th box end -->
+
+<!-- 18th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/skin.jpg' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Skin</h5>
+        <p class="card-text">Dermatological conditions and normal skin development and function.</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 18th box end -->
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+<!-- 19th box start -->
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/stroke.jpg' %}" class="card-img-top" height="50%" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Stroke</h5>
+        <p class="card-text">Include both ischaemic stroke (caused by blood clots) and haemorrhagic stroke (caused by cerebral/intercranial haemorrhage).</p>
+      </div>
+      <!-- Using Modal-->
+
+      <div class="card-footer mx-auto">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal7"> <!--data-toggle and data-target are invalid for bootstrap 5 -->
+               See Files
+          </button>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModal7Label" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+             <div class="modal-header">
+                <h2 class="modal-title" id="exampleModal7Label">Infection</h2>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+             </div>
+             <div class="modal-body">
+              <h3 class="modalbody">No files found!</h3>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Update</button>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- End of Modal-->
+    </div>
+  </div>
+<!-- 19th box end -->
+
+
+<!-- 20th box start 
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/BlackNFC.png' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black NFC Card</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer mx-auto">
+          <button type="button" class="btn btn-warning px-5"><a href="" style="text-decoration: none;color: white;">See files</a></button>
+      </div>
+    </div>
+  </div>
+ 
+
+ 21th box start 
+<div class="col zoom">
+    <div class="card  bg-dark text-light">
+      <img src="{% static 'Images/BlackNFC.png' %}" class="card-img-top" height="50%" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black NFC Card</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer mx-auto">
+          <button type="button" class="btn btn-warning px-5"><a href="" style="text-decoration: none;color: white;">See files</a></button>
+      </div>
+    </div>
+  </div>
+ 21th box end -->
+</div>
+
+
+
+  </section>
+
+  <!-- Products as Card End -->
+
+
+
+
+</main>
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <footer>
+
+
+
+        
+    </footer>
+  
+    
+</body>
+</html>

@@ -1,0 +1,226 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Prescription with NFC Card Identification</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+   
+    {% include 'header.html' %}
+
+        
+
+
+ <main>
+
+   <!-- Slider Start -->
+
+<section class="mt-5 container">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+      
+            <!-- First SLider Start -->
+
+          <div class="carousel-item active bg-dark">
+            <div class="row">
+                <div class="col-lg-7 d-flex align-items-center ps-5 text-light">
+
+                    <!-- We used div here insted of flex direction to make it a packet and then that packet has been kept vertically positioned. -->
+                    
+                    <div>
+
+                        <h2>Digital Prescription Container NFC Card</h2>
+                        <p>Are you worried about where to keep your prescriptions? We bring you the most hassle-free solution</p>
+                        <h1>$5</h1>
+                        <button type="button" class="btn btn-warning">Buy now</button>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+                    <img src= "{% static 'Images/SliderNFCpic1.jpg' %}"  class="d-block w-100" height="500px" alt="...">
+
+                </div>
+            </div>
+            
+          </div>
+
+          <!-- First SLider End -->
+
+
+          <!-- Second SLider Start -->
+
+
+          <div class="carousel-item active bg-light">
+            <div class="row">
+                <div class="col-lg-6 d-flex align-items-center ps-5 text-dark">
+
+                    <div>
+
+                        <h2>Digital Prescription Container NFC Card</h2>
+                        <p>Just swipe your card to any NFC enabled device or our NFC card reader to show prescription details </p>
+                        <h1>$5</h1>
+                        <button type="button" class="btn btn-warning">Buy now</button>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6">
+                    <img src="{% static 'Images/SliderNFCpic2.png' %}"  class="d-block w-100" height="500px" alt="...">
+
+
+
+                </div>
+
+
+            </div>
+            
+          </div>
+
+          <!-- Second SLider End -->
+
+          <!-- Third SLider Start -->
+
+
+    
+          
+          <div class="carousel-item active bg-dark">
+            <div class="row">
+                <div class="col-lg-7 d-flex align-items-center ps-5 text-light">
+                    <div>
+
+                        <h2>NFC Card Reader</h2>
+                        <p>Scan your NFC card in a second using our NFC Card Reader and update your newly got prescription details without any hassle. </p>
+                        <h1>$10</h1>
+                        <button type="button" class="btn btn-warning">Buy now</button>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+                    <img src="{% static 'Images/SliderNFCpic3.jpg' %}" class="d-block w-100" height="500px" alt="...">
+
+
+
+                </div>
+
+
+            </div>
+            
+          </div>
+
+           <!-- Third SLider Start -->
+
+
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+  </section>
+
+  <!-- Slider End -->
+
+
+  <!-- Products as Card start -->
+
+  <section class="container my-5">
+    <div>
+        <h2>Products</h2>
+
+
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- 1st box start -->
+        <div class="col ">
+          <div class="card h-100 bg-dark text-light">
+            <img src="{% static 'Images/BlackNFC.png' %}" class="card-img-top" height="60%" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Black NFC Card</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer mx-auto">
+                <button type="button" class="btn btn-warning px-5">Details</button>
+            </div>
+          </div>
+        </div>
+<!-- 1st box end -->
+
+<!-- 2nd box start -->
+
+
+        <div class="col">
+          <div class="card h-100 bg-dark text-light">
+            <img src="{% static 'Images/GoldenNFC.png' %}" class="card-img-top" height="60%" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">NFC Gold</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer mx-auto">
+                <button type="button" class="btn btn-warning px-5">Details</button>
+            </div>
+          </div>
+        </div>
+
+
+    <!-- 2nd box end -->
+
+    <!-- 3rd box start -->
+        <div class="col">
+          <div class="card h-100 bg-dark text-light">
+            <img src="{% static 'Images/SilverNFC.webp' %}" class="card-img-top" height="60%" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">NFC Silver</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer mx-auto">
+                <button type="button" class="btn btn-warning px-5">Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3rd box end -->
+
+
+
+
+  </section>
+
+  <!-- Products as Card End -->
+
+
+
+
+</main>
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <footer>
+
+
+
+        
+    </footer>
+  
+    
+</body>
+</html>

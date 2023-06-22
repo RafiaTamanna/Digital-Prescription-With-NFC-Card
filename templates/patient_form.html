@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="{% static 'patient_form.css' %}">
+
+   </head>
+
+
+<body>
+  
+    {% include 'header.html' %}
+
+  <main>
+
+    <div class="container1">
+      <div class="title">Patient's Page</div>
+      <div class="content">
+        <form method="POST" action="{% url 'patient_form' %}" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Full Name</span>
+              <input type="text" placeholder="Enter your name" required name="fullname">
+            </div>
+            
+            <div class="input-box">
+              <span class="details">Email</span>
+              <input type="text" placeholder="Enter your email" required name="email">
+            </div>
+            <div class="input-box">
+              <span class="details">Phone Number</span>
+              <input type="text" placeholder="Enter your number" required name="phone">
+            </div>
+
+            <div class="input-box">
+                <span class="details">Age</span>
+                <input type="text" placeholder="Enter your age" required name="age">
+              </div>
+
+              <div class="input-box">
+                <span class="details">Height</span>
+                <input type="text" placeholder="Enter your Height (In cm)" required name="height">
+              </div>
+
+              <div class="input-box">
+                <span class="details">Weight</span>
+                <input type="text" placeholder="Enter your Weight (In kg)" required name="weight">
+              </div>
+
+            <div class="input-box">
+                <span class="details">Blood Group</span>
+                <input type="text" placeholder="Ex: B+, A- " required name="blood">
+              </div>
+            
+            <div class="input-box">
+                <span class="details">Medical History </span>
+                <input type="text" placeholder="Include past and recent illnesses and treatments" required style="font-size: 11px;" name="medhistory">
+              </div>
+            <div class="input-box">
+              <span class="details">Medication Details</span>
+              <input type="text" placeholder="Include all medications that have been taken recently" required style="height: 75px; font-size: 10px;" name="meddetails">
+            </div>
+            
+            
+            <div class="input-box">
+              <span class="details">Health Condition</span>
+              <input style="height: 75px; font-size: 10px;" type="text" placeholder="Describe your recent health condition and the problems" required name="healthcond" >
+            </div>
+
+            <div class="mb-3">
+                <label for="formFileMultiple" class="form-label" style="font-weight:500;">Prescriptions and Files</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple name="presimage">
+              </div>
+
+           
+          </div>
+          <div class="gender-details">
+            <input type="radio" name="gender" id="dot-1">
+            <input type="radio" name="gender" id="dot-2">
+            <input type="radio" name="gender" id="dot-3">
+            <span class="gender-title">Gender</span>
+            <div class="category">
+              <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Male</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Female</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Prefer not to say</span>
+              </label>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" value="Done">
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main> 
+
+  
+  
+
+</body>
+</html>
